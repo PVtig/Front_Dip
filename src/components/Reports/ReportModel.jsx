@@ -7,7 +7,6 @@ class ReportModel extends React.Component {
   constructor(props){
     super (props)
 
-// const response = 
 axios.get('http://localhost/report').then((res)=>{
     this.setState({cars: res.data})
 })
