@@ -6,7 +6,7 @@ export class User extends Component {
     
     return (
       <div> 
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Body>
         <Card.Title>{this.props.data.surname} {this.props.data.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">salary: {this.props.data.salary}</Card.Subtitle>
@@ -14,8 +14,8 @@ export class User extends Component {
         <Card.Text>
           
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#">Details</Card.Link>
+        <Card.Link href="#">Сreate PDF</Card.Link>
       </Card.Body>
     </Card>
       </div>

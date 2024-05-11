@@ -6,7 +6,7 @@ export class Report extends Component {
     
     return (
       <div> 
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Body>
         <Card.Title>{this.props.data.number}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">mileage: {this.props.data.mileage}</Card.Subtitle>
@@ -15,8 +15,8 @@ export class Report extends Component {
         <Card.Subtitle className="mb-2 text-muted">user_id: {this.props.data.user_id}</Card.Subtitle>
         <Card.Text>
         </Card.Text>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#">Details</Card.Link>
+        <Card.Link href="#">Сreate PDF</Card.Link>
       </Card.Body>
     </Card>
       </div>
