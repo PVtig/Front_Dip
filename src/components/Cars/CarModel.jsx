@@ -7,7 +7,6 @@ class CarModel extends React.Component {
   constructor(props){
     super (props)
 
-// const response = 
 axios.get('http://localhost/car').then((res)=>{
     this.setState({cars: res.data})
 })

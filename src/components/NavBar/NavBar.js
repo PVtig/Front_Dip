@@ -18,7 +18,7 @@ function NavBar() {
             navbarScroll
           >
             <Nav.Link href="/car">Cars</Nav.Link>
-            <Nav.Link href="/reports">Reports</Nav.Link>
+            <Nav.Link href="/report">Reports</Nav.Link>
             <Nav.Link href="/garage">Garages</Nav.Link>
             <NavDropdown title="Staff" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/user">Mechanics</NavDropdown.Item>

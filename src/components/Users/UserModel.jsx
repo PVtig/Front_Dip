@@ -7,7 +7,6 @@ class UserModel extends React.Component {
   constructor(props){
     super (props)
 
-// const response = 
 axios.get('http://localhost/user').then((res)=>{
     this.setState({cars: res.data})
 })
