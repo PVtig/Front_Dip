@@ -6,7 +6,6 @@ import {
   Image,
   View,
 } from "@react-pdf/renderer";
-import nextLogo from "../nextjslogo.png";
 
 const styles = StyleSheet.create({
   page: {
@@ -47,7 +46,6 @@ function PDF() {
       <Page style={styles.page}>
         <Text style={styles.title}>Hello world</Text>
         <View style={styles.section}>
-          <Image src={nextLogo} />
           <Text>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur
             ad, rem iste similique voluptatem totam earum minima veritatis porro

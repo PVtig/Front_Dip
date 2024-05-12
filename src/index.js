@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
 import NavBar from './components/NavBar/NavBar';
 import Rout from './Rout';
+import PDFServise from './PDF/PDFService';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,7 @@ root.render(
     <BrowserRouter>
     <NavBar/>
     <Rout/>
+    <PDFServise/>
     </BrowserRouter>
   </React.StrictMode>
 );
