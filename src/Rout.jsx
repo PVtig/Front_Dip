@@ -1,5 +1,6 @@
 import CarModel from './components/Cars/CarModel';
 import GarageModel from './components/Garage/GarageModel';
+import Login from './components/Login_form/Login';
 import ReportModel from './components/Reports/ReportModel';
 import UserModel from './components/Users/UserModel';
 import { Route, Routes } from 'react-router-dom';
@@ -19,6 +20,7 @@ function Rout() {
         <Route path="/user" element={<UserModel />}></Route>
         <Route path="/report" element={<ReportModel />}></Route>
         <Route path="/garage" element={<GarageModel />}></Route>
+        <Route path="/login" element={<Login />}></Route>
       </Routes>
     </>
   );
