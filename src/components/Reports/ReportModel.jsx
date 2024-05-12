@@ -1,23 +1,24 @@
 import React from 'react';
 import Reports from './Reports';
 import axios from 'axios';
+import PostService from '../../API/PostService';
 
 
 class ReportModel extends React.Component {
   constructor(props){
     super (props)
 
-axios.get('http://localhost/report').then((res)=>{
-    this.setState({cars: res.data})
-})
+    PostService.getAll('report').then((res)=>{
+      this.setState({report: res.data})
+      })
     this.state = {
-      cars: []
+      report: []
     }
   }
   render(){
     return (
       <div className="App">
-        <Reports items={this.state.cars}/>
+        <Reports items={this.state.report}/>
       </div>
     );
 
