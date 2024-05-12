@@ -1,23 +1,24 @@
 import React from 'react';
 import Garages from './Garages';
 import axios from 'axios';
+import PostService from '../../API/PostService';
 
 
 class GarageModel extends React.Component {
   constructor(props){
     super (props)
+    PostService.getAll('garage').then((res)=>{
+      this.setState({garage: res.data})
+      })
 
-axios.get('http://localhost/garage').then((res)=>{
-    this.setState({cars: res.data})
-})
     this.state = {
-      cars: []
+      garage: []
     }
   }
   render(){
     return (
       <div className="App">
-        <Garages items={this.state.cars}/>
+        <Garages items={this.state.garage}/>
       </div>
     );
 
