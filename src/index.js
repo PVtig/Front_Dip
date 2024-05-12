@@ -12,7 +12,6 @@ root.render(
     <BrowserRouter>
     <NavBar/>
     <Rout/>
-    <PDFServise/>
     </BrowserRouter>
   </React.StrictMode>
 );

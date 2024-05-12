@@ -1,24 +1,48 @@
+import React from 'react';
 import PDF from "./PDF";
-import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
-
-function PDFServise() {
-  return (
-    <div>
-      <PDFDownloadLink document={<PDF />} fileName="myfirstpdf.pdf">
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import PostService from "../API/PostService";
+class PDFServise extends React.Component {
+    constructor(props){
+      super (props)
+      PostService.getAll('car').then((res)=>{
+        this.setState({cars: res.data})
+        })
+      this.state = {
+        cars: []
+      }
+    }
+    render(){
+      return (
+        <div >
+          <PDFDownloadLink document={<PDF items = {this.state.cars}/>} fileName="myfirstpdf.pdf">
         {({ loading, url, error, blob }) =>
           loading ? (
-            <button>Loading Document ...</button>
+            <button>Create PDF</button>
           ) : (
-            <button>Download now!</button>
+            <button>Create PDF</button>
           )
         }
       </PDFDownloadLink>
-
-      <PDFViewer>
-        <PDF />
-      </PDFViewer>
-    </div>
-  );
-}
+        </div>
+      );
+  
+    }
+  }
+// function PDFServise() {
+//   return (
+//     <div>
+//       <PDFDownloadLink document={<PDF />} fileName="myfirstpdf.pdf">
+//         {({ loading, url, error, blob }) =>
+//           loading ? (
+//             <button>Create PDF</button>
+//           ) : (
+//             <button>Create PDF</button>
+//           )
+//         }
+//       </PDFDownloadLink>
+//     </div>
+//   );
+// }
 
 export default PDFServise;

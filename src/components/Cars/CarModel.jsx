@@ -1,6 +1,5 @@
 import React from 'react';
 import Cars from './Cars';
-import axios from 'axios';
 import PostService from '../../API/PostService';
 
 
