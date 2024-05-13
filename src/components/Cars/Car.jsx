@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card';
+import PDFServise from '../../PDF/PDFService';
 
 export class Car extends Component {
   render() {
@@ -14,7 +15,7 @@ export class Car extends Component {
         <Card.Text>
         </Card.Text>
         <Card.Link href="#">Details</Card.Link>
-        <Card.Link href="#">Сreate PDF</Card.Link>
+        <Card.Link href="#"><PDFServise/></Card.Link>
       </Card.Body>
     </Card>
       </div>
